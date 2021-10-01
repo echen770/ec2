@@ -6,5 +6,5 @@ urlpatterns = [
     path("home/", views.home, name="home"),
     # path("profile/", views.profile, name="profile"),
     path("certifications/", views.certification, name="certification"),
-    # path("contact/", views.contact, name="contact"),
+    path("contact/", views.contact, name="contact"),
 ]

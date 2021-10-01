@@ -21,4 +21,5 @@ class ProfileAdmin(admin.ModelAdmin):
         "id",
         "title",
         "content",
+        "checked",
     ]

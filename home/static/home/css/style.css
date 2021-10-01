@@ -31,6 +31,7 @@ body {
   font-size: 2rem;
   background-color: var(--color-body);
   color: var(--color-body-dark);
+  min-width: 500px;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
@@ -107,6 +108,12 @@ a {
   border-color: var(--color-accent);
   color: var(--color-accent);
   margin: 1rem;
+}
+
+.btn__contact {
+  width: 70%;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 /* collapsibles */
@@ -355,6 +362,14 @@ a {
     border-radius: 0.5rem;
   }
 
+  .content__certification {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .content__contact {
+    background: none;
+  }
+
   .slider input[type='radio'] {
     outline: none;
     display: inline-block;
@@ -431,8 +446,8 @@ a {
   height: 10rem;
 }
 
-.card__imgBx {
-  display: none;
+.mobile__imgBx {
+  height: 20vh;
 }
 
 .card__radio {
@@ -440,12 +455,8 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-  /* .card {
-    overflow: hidden;
-  } */
-
-  .card__imgBx {
-    display: flex;
+  .mobile__imgBx {
+    height: 100%;
   }
 }
 
@@ -457,4 +468,61 @@ a {
   .grid--1x2 {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+/* contact form */
+
+.contact__form_field {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  border: none;
+  transition: box-shadow 0.5s;
+}
+
+.contact__form_field:focus {
+  outline: none;
+  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.2);
+}
+
+.contact__form_field:hover {
+  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.2);
+}
+
+.contact__fieldset {
+  border-radius: 1rem;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: var(--color-primary);
+  font-weight: 600;
+  padding: 2rem;
+}
+
+.grid--form {
+  gap: 2rem;
+}
+
+.contact__form_field_label {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .contact__fieldset {
+    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+  }
+}
+
+.message__container {
+  position: absolute;
+  top: 10rem;
+  right: 0;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  margin-right: 3rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
 }

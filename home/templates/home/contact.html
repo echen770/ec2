@@ -1,0 +1,40 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block content %}
+<input type="radio" name="slider" class="nav__radio {{input}}" checked='checked'>
+<div class="imgBx">
+    <img class="home__img mobile__imgBx" src="{% static 'home/images/m01.jpg' %}" alt="">
+    <div class="content content__contact">
+        <form action="" method="post">
+            {% csrf_token %}
+            <fieldset class="contact__fieldset">
+                <div class="grid grid--1x2 grid--form">
+                    <div class="contact__grid_column">
+                        <label for="first_name" class="contact__form_field_label">{{form.first_name.label}}</label>
+                        {{form.first_name}}
+                    </div>
+                    <div class="contact__grid_column">
+                        <label for="last_name" class="contact__form_field_label">{{form.last_name.label}}</label>
+                        {{form.last_name}}
+                    </div>
+                </div>
+                <div class="grid grid--1x2 grid--form">
+                    <div class="contact__grid_column">
+                        <label for="organization" class="contact__form_field_label">{{form.phone_number.label}}</label>
+                        {{form.phone_number}}
+                    </div>
+                    <div class="contact__grid_column">
+                        <label for="email" class="contact__form_field_label">{{form.email.label}}</label>
+                        {{form.email}}
+                    </div>
+                </div>
+                <div>
+                    <label for="email" class="contact__form_field_label">{{form.message.label}}</label>
+                    {{form.message}}
+                    <button class="btn btn__contact" type="submit" >Send</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+{% endblock content %}

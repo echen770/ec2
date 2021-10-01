@@ -4,3 +4,9 @@ collapsibles.forEach((item) =>
     this.classList.toggle("nav__list_expanded");
   })
 );
+
+function setValue() {
+  document.getElementById("checked").checked=true;
+}
+
+window.onload = setValue;
