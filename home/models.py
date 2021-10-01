@@ -11,3 +11,11 @@ class Message(models.Model):
 
     def __str__(self) -> str:
         return f"{self.first_name} {self.last_name} - {self.date_created.strftime('%Y-%m-%d %H:%M:%S')}"
+
+
+class Profile(models.Model):
+    title = models.CharField(max_length=100, null=False, blank=False)
+    content = models.CharField(max_length=255, null=False, blank=False)
+
+    def __str__(self) -> str:
+        return self.title

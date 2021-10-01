@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&display=swap"
+    rel="stylesheet">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} - Ensui Chen</title>
+</head>
+<body>
+    <header>
+        <nav class="nav collapsible">
+            <div class="nav_brand">
+                <a href="{% url 'home' %}"><img src="{% static 'home/images/logo.svg' %}" alt="" class="icon nav__icon" ></a>
+                <a href="{% url 'home' %}"><h1 class="nav__heading" >Ensui Chen</h1></a>
+            </div>
+            <svg fill="#fff" class="icon nav__toggler">
+                <use xlink:href="{% static 'home/images/sprite.svg' %}#menu"></use>
+            </svg>
+            <ul class="list nav__list">
+                <li class="nav__item" ><a href="{% url 'home' %}" class="nav__item_a">home</a></li>
+                <li class="nav__item" ><a href="{% url 'certification' %}" class="nav__item_a">certification</a></li>
+                <li class="nav__item" ><a href="{% url 'home' %}" class="nav__item_a">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    {% if messages %}
+        {% for message in messages %}
+        <div class="message__container" >
+            <div class="message__content">
+                {{message}}
+            </div>
+        </div>
+        {% endfor %}
+    {% endif %}
+    <div class="slider" >
+        {% block content %}
+        {% endblock content %}
+    </div>
+    <div class="footer">
+        <div class="footer__brand">
+            <a target="_blank" href="https://github.com/echen770"><img src="{% static 'home/images/github.png' %}" alt="" class="icon footer__icon"></a>
+            <a target="_blank" href="https://www.facebook.com/ensui.chen/"><img src="{% static 'home/images/facebook.svg' %}" alt="" class="icon footer__icon"></a>
+            <a target="_blank" href="https://twitter.com/echen770"><img src="{% static 'home/images/twitter.svg' %}" alt="" class="icon footer__icon"></a>
+            <a target="_blank" href="https://www.linkedin.com/in/ensui-chen/"><img src="{% static 'home/images/linkedin.png' %}" alt="" class="icon footer__icon"></a>
+        </div>
+        <div class="footer__copyright">
+            &copy; {% now 'Y' %} Ensui Chen
+            <div class="footer__content">
+                <div class="footer__credit">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+                <div class="footer__credit">Photo by <a href="https://unsplash.com/@raimondklavins">Raimond Klavins</a> on <a href="https://unsplash.com/" title="Unsplash">Unsplash</a></div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'home/js/main.js' %}"></script>
+</body>
+</html>

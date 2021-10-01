@@ -1,59 +1,22 @@
+{% extends 'home/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-    href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&display=swap"
-    rel="stylesheet">
-    <link
-    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&display=swap"
-    rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}} - Ensui Chen</title>
-</head>
-<body>
-    <header>
-        <nav class="nav collapsible">
-            <div class="nav_brand">
-                <a href="{% url 'home' %}"><img src="{% static 'home/images/logo.svg' %}" alt="" class="icon" ></a>
-                <a href="{% url 'home' %}"><h1 class="nav__heading" >Ensui Chen</h1></a>
-            </div>
-            <svg class="icon nav__toggler">
-                <use xlink:href="{% static 'home/images/sprite.svg' %}#menu"></use>
-            </svg>
-            <ul class="list nav__list">
-                <li class="nav__item"><a href="{% url 'home' %}">home</a></li>
-                <li class="nav__item"><a href="{% url 'home' %}">certifications</a></li>
-                <li class="nav__item"><a href="{% url 'home' %}">contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="slider" >
-        <input type="radio" name="slider" class="nav__radio" checked='checked'>
-        <div class="imgBx">
-            <img src="{% static 'home/images/01.jpg' %}" alt="">
-            <div class="content">
-                <h2 class="content__heading">Slide One</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio corrupti officia itaque consectetur quam quibusdam aut voluptas. Incidunt, qui ullam mollitia adipisci repellendus culpa doloremque saepe praesentium maiores odit ducimus cumque magnam beatae alias, nemo optio delectus sint? Totam voluptatum inventore voluptas hic doloribus laboriosam accusantium nesciunt aperiam odit id.</p>
-                <a href="#" class="btn btn--outline">certifications</a>
-                <a href="#" class="btn btn--outline">message</a>
-            </div>
-        </div>
-        <input type="radio" name="slider" class="nav__radio">
-        <div class="imgBx">
-            <img src="{% static 'home/images/02.jpg' %}" alt="">
-            <div class="content">
-                <h2 class="content__heading">Slide Two</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio corrupti officia itaque consectetur quam quibusdam aut voluptas. Incidunt, qui ullam mollitia adipisci repellendus culpa doloremque saepe praesentium maiores odit ducimus cumque magnam beatae alias, nemo optio delectus sint? Totam voluptatum inventore voluptas hic doloribus laboriosam accusantium nesciunt aperiam odit id.</p>
-                <a href="#" class="btn btn--outline">message</a>
-            </div>
+{% block content %}
+    <input type="radio" name="slider" class="nav__radio {{input}}" checked='checked'>
+    <div class="imgBx">
+        <img class="home__img" src="{% static 'home/images/01.jpg' %}" alt="">
+        <div class="content">
+            <h2 class="content__heading">Slide One</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio corrupti officia itaque consectetur quam quibusdam aut voluptas. Incidunt, qui ullam mollitia adipisci repellendus culpa doloremque saepe praesentium maiores odit ducimus cumque magnam beatae alias, nemo optio delectus sint? Totam voluptatum inventore voluptas hic doloribus laboriosam accusantium nesciunt aperiam odit id.</p>
+            <a href="#" class="btn btn__slider_content">message</a>
         </div>
     </div>
-    <script src="{% static 'home/js/main.js' %}"></script>
-</body>
-</html>
+    <input type="radio" name="slider" class="nav__radio">
+    <div class="imgBx">
+        <img class="home__img" src="{% static 'home/images/02.jpg' %}" alt="">
+        <div class="content">
+            <h2 class="content__heading">Slide Two</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio corrupti officia itaque consectetur quam quibusdam aut voluptas. Incidunt, qui ullam mollitia adipisci repellendus culpa doloremque saepe praesentium maiores odit ducimus cumque magnam beatae alias, nemo optio delectus sint? Totam voluptatum inventore voluptas hic doloribus laboriosam accusantium nesciunt aperiam odit id.</p>
+            <a href="#" class="btn btn__slider_content">message</a>
+        </div>
+    </div>
+{% endblock content %}
