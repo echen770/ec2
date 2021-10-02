@@ -1,4 +1,4 @@
-@import './normalize.css';
+@import '{% static "./normalize.css" %}';
 
 :root {
   --color-secondary: #78663d;
@@ -62,7 +62,7 @@ a {
 }
 
 .list--tick {
-  list-style-image: url(../images/tick.svg);
+  list-style-image: url('{% static "../images/tick.svg" %}');
   padding-left: 3rem;
   color: var(--color-headings);
 }
