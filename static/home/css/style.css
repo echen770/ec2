@@ -1,5 +1,3 @@
-@import '{% static "./normalize.css" %}';
-
 :root {
   --color-secondary: #78663d;
   --color-primary: #3b4c4d;
