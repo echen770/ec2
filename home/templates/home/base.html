@@ -7,9 +7,6 @@
     <link
     href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&display=swap"
     rel="stylesheet">
-    <link
-    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&display=swap"
-    rel="stylesheet">
     <link rel="stylesheet" href="{% static 'home/css/normalize.css' %}">
     <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
     <meta charset="UTF-8">
@@ -21,7 +18,10 @@
     <header>
         <nav class="nav collapsible">
             <div class="nav_brand">
-                <a href="{% url 'home' %}"><img src="{% static 'home/images/logo.svg' %}" alt="" class="icon nav__icon" ></a>
+                <a href="{% url 'home' %}">
+                    <svg class="icon nav__icon">
+                        <use xlink:href="{% static 'home/images/sprite.svg' %}#logo"></use>
+                    </svg>
                 <a href="{% url 'home' %}"><h1 class="nav__heading" >Ensui Chen</h1></a>
             </div>
             <svg fill="#fff" class="icon nav__toggler">
@@ -50,8 +50,18 @@
     <div class="footer">
         <div class="footer__brand">
             <a target="_blank" href="https://github.com/echen770"><img src="{% static 'home/images/github.png' %}" alt="" class="icon footer__icon"></a>
-            <a target="_blank" href="https://www.facebook.com/ensui.chen/"><img src="{% static 'home/images/facebook.svg' %}" alt="" class="icon footer__icon"></a>
-            <a target="_blank" href="https://twitter.com/echen770"><img src="{% static 'home/images/twitter.svg' %}" alt="" class="icon footer__icon"></a>
+            <a target="_blank" href="https://www.facebook.com/ensui.chen/">
+                <svg class="icon footer__icon">
+                    <use xlink:href="{% static 'home/images/sprite.svg' %}#facebook"></use>
+                </svg>
+                <!-- <img src="{% static 'home/images/sprite.svg' %}#facebook" alt="" class="icon footer__icon"> -->
+            </a>
+            <a target="_blank" href="https://twitter.com/echen770">
+                <svg class="icon footer__icon">
+                    <use xlink:href="{% static 'home/images/sprite.svg' %}#twitter"></use>
+                </svg>
+                <!-- <img src="{% static 'home/images/sprite.svg' %}#twitter" alt="" class="icon footer__icon"> -->
+            </a>
             <a target="_blank" href="https://www.linkedin.com/in/ensui-chen/"><img src="{% static 'home/images/linkedin.png' %}" alt="" class="icon footer__icon"></a>
         </div>
         <div class="footer__copyright">

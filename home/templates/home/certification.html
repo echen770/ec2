@@ -34,7 +34,9 @@
             </div>
             <div class="card">
                 <div class="card__header">
-                    <img src="{% static 'home/images/badge_oca.svg' %}" class="icon__card" alt="">
+                    <svg class="icon__card">
+                        <use xlink:href="{% static 'home/images/sprite.svg' %}#badge_oca"></use>
+                    </svg>
                     <div>
                         <h3 class="certification__name">Java SE 7 Programmer</h3>
                         <span>Oracle Certified Associate</span>

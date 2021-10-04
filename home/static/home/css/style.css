@@ -60,15 +60,13 @@ a {
 }
 
 .list--tick {
-  list-style-image: url('{% static "../images/tick.svg" %}');
-  padding-left: 3rem;
   color: var(--color-headings);
 }
 
 .list--tick .list__item {
   padding-left: 0.5rem;
   margin-bottom: 2rem;
-  text-align: left;
+  text-align: center;
 }
 
 @media screen and (min-width: 1024px) {
@@ -307,6 +305,7 @@ a {
 }
 
 .footer__icon {
+  fill: #fff;
   opacity: 0.6;
   transition: opacity 0.5s;
 }
@@ -367,6 +366,7 @@ a {
 
   .content__certification {
     background-color: rgba(255, 255, 255, 0.5);
+    gap: 2rem;
   }
 
   .content__contact {
