@@ -5,7 +5,7 @@ from .models import Profile
 
 
 def home(request):
-    qs = Profile.objects.all()
+    qs = Profile.objects.all().order_by("id")
     return render(request, "home/home.html", {"title": "Home", "profile": qs})
 
 
