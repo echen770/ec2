@@ -16,11 +16,11 @@
         <picture>
             <source
                 type="image/webp"
-                srcset="{% static image_static_webp1x %} 1x, {% static image_static_webp2x %} 2x"
+                srcset="{% static image_static_webp1x %} 960w, {% static image_static_webp2x %} 1920w"
             />
             <source
                 type="image/jpg"
-                srcset="{% static image_static %} 1x, {% static image_static_2x %} 2x"
+                srcset="{% static image_static %} 960w, {% static image_static_2x %} 1920w"
             />
             <img class="home__img mobile__imgBx" src="{% static image_static %}" alt="">
         </picture>
