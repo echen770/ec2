@@ -10,7 +10,23 @@
     <div class="imgBx">
         {% with y=p.id|stringformat:"s" %}
         {% with "home/images/"|add:y|add:".jpg" as image_static %}
+        {% with "home/images/"|add:y|add:".webp" as image_static_webp1x %}
+        {% with "home/images/"|add:y|add:"@2x.webp" as image_static_webp2x %}
+        {% with "home/images/"|add:y|add:"@2x.jpg" as image_static_2x %}
+        <picture>
+            <source
+                type="image/webp"
+                srcset="{% static image_static_webp1x %} 1x, {% static image_static_webp2x %} 2x"
+            />
+            <source
+                type="image/jpg"
+                srcset="{% static image_static %} 1x, {% static image_static_2x %} 2x"
+            />
             <img class="home__img mobile__imgBx" src="{% static image_static %}" alt="">
+        </picture>
+        {% endwith %}
+        {% endwith %}
+        {% endwith %}
         {% endwith %}
         {% endwith %}
         <div class="content">
