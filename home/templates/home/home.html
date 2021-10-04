@@ -32,7 +32,10 @@
         <div class="content">
             <h2 class="content__heading">{{p.title}}</h2>
             <p>{{p.content}}</p>
-            <a href="{% url 'contact' %}" class="btn btn__slider_content">message</a>
+            <div class="content_btn_grp">
+                <a href="{% url 'contact' %}" class="btn btn__slider_content">message</a>
+                <a href="{% static 'home/documents/ensui_chen.pdf' %}" download class="btn btn__slider_content">Resume</a>
+            </div>
         </div>
     </div>
     {% endfor %}
