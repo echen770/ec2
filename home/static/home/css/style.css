@@ -127,7 +127,7 @@ a {
   color: var(--color-body-dark);
 }
 
-.nav_brand {
+.nav__brand {
   display: flex;
   gap: 2rem;
   margin: 1rem;
@@ -337,6 +337,8 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (min-width: 768px) and (min-height: 500px) {
