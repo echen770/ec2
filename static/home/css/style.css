@@ -237,7 +237,6 @@ a {
   justify-content: center;
   align-items: flex-end;
   background-color: var(--color-body);
-  min-width: 500px;
 }
 
 .imgBx {
@@ -332,6 +331,12 @@ a {
 
 .footer__content a {
   color: var(--color-border);
+}
+
+.footer__brand {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 @media screen and (min-width: 768px) and (min-height: 500px) {
