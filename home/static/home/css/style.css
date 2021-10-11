@@ -148,7 +148,7 @@ a {
 }
 
 .nav__heading:hover {
-  color: var(--color-secondary);
+  color: var(--color-accent);
 }
 
 .nav__heading {
