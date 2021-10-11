@@ -109,6 +109,7 @@ a {
   width: 70%;
   border-color: var(--color-primary);
   color: var(--color-primary);
+  cursor: pointer;
 }
 
 /* collapsibles */
